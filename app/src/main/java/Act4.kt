@@ -2,10 +2,12 @@ package com.example.Prak5.ui.them
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -46,9 +48,17 @@ Row {
         Row(modifier = Modifier.selecttable(
             selected = textJk == item,
             onClick = { textJK = item}
-        )
+        ), verticalAlignment = Alignment.CenterVertivcally) {
+            RadioButton(
+                selected = textJK == item,
+                onClick = {
+                    textJK = item
+                })
+            Text(item)
+        }
 
         )
+
 
 
 }
