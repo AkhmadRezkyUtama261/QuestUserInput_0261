@@ -4,8 +4,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.R
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -76,8 +78,21 @@ Row {
             dimensionResource(id = R.dimen.padding_medium), top = dimensionResource(
                 id =R.dimen.padding_medium
             )),
-
+            thickness = dimensionResource(1dp)
+            color =Color.DarkGray
         )
+        Button(
+            modifier = Modifier.fillMaxWidth(fraction = 1f),
+            // the button is enabled when the user makes a selection
+            enabled = textAlamat.isNotEmpty(),
+            onClick = {
+                nama=TextNama
+                jenis=TextJK
+                alamat=textAlamat
+            }
+        ) {
+            Text(StringResource("Submit"))
+        }
 
 
     }
