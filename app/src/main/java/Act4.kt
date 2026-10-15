@@ -82,15 +82,15 @@ Row {
                 id =R.dimen.padding_medium
             )),
             thickness = dimensionResource(1dp)
-            color =Color.DarkGray
+            color = Color.DarkGray
         )
         Button(
             modifier = Modifier.fillMaxWidth(fraction = 1f),
             // the button is enabled when the user makes a selection
             enabled = textAlamat.isNotEmpty(),
             onClick = {
-                nama=TextNama
-                jenis=TextJK
+                nama=textNama
+                jenis=textJK
                 alamat=textAlamat
             }
         ) {
