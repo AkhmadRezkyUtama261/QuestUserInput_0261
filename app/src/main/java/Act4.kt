@@ -41,7 +41,17 @@ fun FormDataDiri(modifier: Modifier){
                 textNama = it
             }
         )
+Row {
+    gender.forEach { item ->}
+        Row(modifier = Modifier.selecttable(
+            selected = textJk == item,
+            onClick = { textJK = item}
+        )
 
+        )
+
+
+}
 
     }
 
